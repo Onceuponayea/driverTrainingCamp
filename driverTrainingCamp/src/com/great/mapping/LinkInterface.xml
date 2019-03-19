@@ -2,20 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapping.DeptInterface">
-	<select id="getInfo" parameterType="string" resultType="com.great.entity.Crawler">
-		select * from tbl_crawler 
-		<where>
-			<if test="_parameter!=null">   
-				crawler_time>#{_parameter}
-			</if>
-		</where>
+	<select id="getLink"  resultType="com.great.entity.Link">
+		select * from tbl_link 
 	</select>	
 	
-	<insert id="addInfo" parameterType="com.great.entity.Crawler">
-		insert into  tbl_crawler(crawler_title,crawler_url,crawler_time) value(#{crawler_title},#{crawler_url},#{crawler_time})
+	<insert id="addLink" parameterType="com.great.entity.Link">
+		insert  into  tbl_link(link_name,link_url) value(#{link_name},#{link_url})
 	</insert>
 	
-	<delete id="delInfo" parameterType="int">
-		delete from  tbl_crawler where crawler_id=#{_parameter}
+	<delete id="delLink" parameterType="int">
+		delete from  tbl_link where link_id=#{_parameter}
 	</delete>
 </mapper>
