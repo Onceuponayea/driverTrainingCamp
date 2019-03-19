@@ -10,6 +10,6 @@ public interface CrawlerInterface {
 	//添加爬虫爬取的信息
 	public void addInfo(Crawler crawler);
 	//删除爬虫爬取的信息
-	public void delInfo(int crawler_id); 
+	public void delInfo(int crawler_id);
 
 }
