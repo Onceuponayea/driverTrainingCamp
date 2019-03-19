@@ -2,7 +2,7 @@
     <wb-module deploy-name="driverTrainingCamp">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="driverTrainingCamp"/>
         <property name="java-output-path" value="/driverTrainingCamp/build/classes"/>
+        <property name="context-root" value="driverTrainingCamp"/>
     </wb-module>
 </project-modules>
