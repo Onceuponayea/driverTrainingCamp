@@ -14,7 +14,7 @@
 	<insert id="addInfo" parameterType="com.great.entity.Crawler">
 		insert into  tbl_crawler(crawler_title,crawler_url,crawler_time) value(#{crawler_title},#{crawler_url},#{crawler_time})
 	</insert>
-	
+ 	
 	<delete id="delInfo" parameterType="int">
 		delete from  tbl_crawler where crawler_id=#{_parameter}
 	</delete>
