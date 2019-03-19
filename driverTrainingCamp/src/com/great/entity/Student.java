@@ -6,6 +6,7 @@ public class Student {
 	private int user_id;
 	private int subject_id;
 	private int level_id;
+	private String student_phone;
 	private String student_name;
 	private String student_sex;
 	private String student_idnum;
@@ -17,8 +18,9 @@ public class Student {
 	public Student() {
 		super();
 	}
-	public Student(int student_id, int teacher_id, int user_id, int subject_id, int level_id, String student_name,
-			String student_sex, String student_idnum, String student_birth, String student_date,
+	
+	public Student(int student_id, int teacher_id, int user_id, int subject_id, int level_id, String student_phone,
+			String student_name, String student_sex, String student_idnum, String student_birth, String student_date,
 			String student_adress) {
 		super();
 		this.student_id = student_id;
@@ -26,6 +28,7 @@ public class Student {
 		this.user_id = user_id;
 		this.subject_id = subject_id;
 		this.level_id = level_id;
+		this.student_phone = student_phone;
 		this.student_name = student_name;
 		this.student_sex = student_sex;
 		this.student_idnum = student_idnum;
@@ -33,6 +36,7 @@ public class Student {
 		this.student_date = student_date;
 		this.student_adress = student_adress;
 	}
+
 	public int getStudent_id() {
 		return student_id;
 	}
@@ -98,6 +102,14 @@ public class Student {
 	}
 	public void setStudent_adress(String student_adress) {
 		this.student_adress = student_adress;
+	}
+
+	public String getStudent_phone() {
+		return student_phone;
+	}
+
+	public void setStudent_phone(String student_phone) {
+		this.student_phone = student_phone;
 	}
 	
 	
