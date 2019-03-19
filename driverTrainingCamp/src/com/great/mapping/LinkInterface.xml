@@ -9,7 +9,7 @@
 	<insert id="addLink" parameterType="com.great.entity.Link">
 		insert  into  tbl_link(link_name,link_url) value(#{link_name},#{link_url})
 	</insert>
-	
+
 	<delete id="delLink" parameterType="int">
 		delete from  tbl_link where link_id=#{_parameter} 
 	</delete>

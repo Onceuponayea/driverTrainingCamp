@@ -10,6 +10,6 @@ public interface LinkInterface {
 		//添加友情链接
 		public void addLink(Link crawler);
 		//删除友情链接
-		public void delLink(int link_id);
+		public void delLink(int link_id); 
 
 }
