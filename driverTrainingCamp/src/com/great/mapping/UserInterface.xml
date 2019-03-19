@@ -1,7 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.great.mapping.UserInterface">
-	
+<mapper namespace="com.great.mapping.UserInterface" >
 
+    <!-- 查询是什么角色登录,判断账号是否被禁用 -->
+	<select id="userLogin" parameterType="com.great.entity.User" resultType="com.great.entity.User">
+	select * from tbl_user
+	 <where>
+	     user_account=#{user_account} and user_pwd=#{user_pwd}
+	 </where>
+	</select>
+	<!-- 根据user_id查询运营部门信息 -->
+	<select id="findControlByUid" parameterType="com.great.entity.Control" resultType="com.great.entity.Control">
+	select * from tbl_control where user_id=#{user_id}
+	</select>
+    <!-- 根据user_id查询驾校信息 -->
+	<select id="findSchoolByUid" parameterType="com.great.entity.School" resultType="com.great.entity.School">
+	select * from tbl_school where user_id=#{user_id}
+	</select>
+	<!-- 根据user_id查询教练信息 -->
+	<select id="findTeacherByUid" parameterType="com.great.entity.Teacher" resultType="com.great.entity.Teacher">
+	select * from tbl_teacher where user_id=#{user_id}
+	</select>
+	<!-- 根据user_id查询学员信息 -->
+	<select id="findStudentByUid" parameterType="com.great.entity.Student" resultType="com.great.entity.Student">
+	select * from tbl_student where user_id=#{user_id}
+	</select>
+    <!-- 根据role_id查询菜单-->
+    <select id="findMenuByRoleId" parameterType="int" resultType="com.great.entity.Menu">
+    select * from tbl_rolemenu a, tbl_menu b
+    <where>
+        a.role_id=#{0} and a.menu_id = b.menu_id
+    </where>
+    </select>
+    <!-- 查看学员身份证是否被注册 -->
+    <select id="checkStudentIdentity" parameterType="int" resultType="com.great.entity.Student">
+    select * from tbl_student where student_idnum=#{0}
+    </select>
+    <!-- 查看学员电话是否被注册 -->
+    <select id="checkStudentPhone" parameterType="int" resultType="com.great.entity.Student">
+    select * from tbl_student where student_phone=#{0}
+    </select>
+    <!-- 学员和驾校注册插入账号密码信息到user表 -->
+    <insert id="insertIntoTblUser" parameterType="com.great.entity.User">
+    insert into tbl_user(userstate_id, role_id, user_account, user_pwd)
+    values(#{userstate_id}, #{role_id}, #{user_account}, #{user_pwd})
+    </insert>
+    <!-- 查询新插入数据的user_id -->
+    <select id="findNewInsertUid" parameterType="java.lang.String" resultType="int">
+    select user_id from tbl_user where user_account=#{0}
+    </select>
+    <!-- 学员注册 -->
+    <insert id="insertStudentInfo" parameterType="com.great.entity.Student">
+    insert into tbl_student(student_name,student_sex,student_birth,student_address,student_phone,student_idnum,student_idimg,student_date,student_img,student_state)
+    values(#{student_name},#{student_sex},#{student_birth},#{student_address},#{student_phone},#{student_idnum},#{student_idimg},#{student_date},#{student_img},#{student_state})
+    </insert>
+    
+    <!-- 查询所有驾校 -->
+    <select id="findAllSchools" resultType="com.great.entity.School">
+    select * from tbl_school
+    </select>
+    <!-- 根据驾校查询所有教练 -->
+    <select id="findTeacherBySchool" parameterType="int" resultType="com.great.entity.Teacher">
+    select * from tbl_teacher
+    <where>
+        school_id=#{0}
+    </where>
+    </select>
+    <!-- 查询驾校电话是否被注册 -->
+    <select id="checkSchoolPhone" parameterType="int" resultType="com.great.entity.School">
+    select * from tbl_school where school_phone=#{0}
+    </select>
+    <!-- 查询驾校证件号是否被注册 -->
+    <select id="checkSchoolIdentity" parameterType="int" resultType="com.great.entity.School">
+    select * from tbl_school where school_code=#{0}
+    </select>
+    <!--  驾校开通申请(注册)-->
+    <insert id="insertSchoolInfo" parameterType="com.great.entity.School">
+    insert into tbl_school(school_name, school_phone, school_introduce, school_code, school_master, school_date, school_img)
+    values(#{school_name},#{school_phone},#{school_introduce},#{school_code},#{school_master},#{school_date},#{school_img})
+    </insert>
 </mapper>
