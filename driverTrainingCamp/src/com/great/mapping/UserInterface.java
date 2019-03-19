@@ -12,7 +12,7 @@ import com.great.entity.Teacher;
 import com.great.entity.User;
 
 @Repository
-public interface UserInterface {
+public interface UserInterface { 
 	public List<User> userLogin(String user_account, String user_pwd); //查询是什么角色登录,判断账号是否被禁用
 	public List<Control> findControlByUid(int user_id); //根据user_id查询运营部门信息
 	public List<School> findSchoolByUid(int user_id); //根据user_id查询驾校信息

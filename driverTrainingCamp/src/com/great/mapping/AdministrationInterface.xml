@@ -4,7 +4,7 @@
 <mapper namespace="com.great.mapping.AdministrationInterface">
 
 	<!-- 添加日志 -->
-	<insert id="insertLogInfo" parameterType="com.great.entity.Log">
+	<insert id="insertLogInfo" parameterType="com.great.entity.Log"> 
 		insert into
 		tbl_log(log_detail, log_date, log_type)
 		values(#{log_detail},

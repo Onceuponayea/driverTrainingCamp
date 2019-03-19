@@ -9,7 +9,7 @@ import com.great.entity.Param;
 
 @Repository
 public interface AdministrationInterface {
-	public void insertLogInfo(Log log); //添加日志
+	public void insertLogInfo(Log log); //添加日志 
 	public List<Log> selectAllLog(); //查询日志
 	public void updateLogById(Log log); //修改日志
 	public void deleteLogById(int log_id); //删除日志
