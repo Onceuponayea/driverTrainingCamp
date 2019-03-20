@@ -12,28 +12,28 @@ import com.great.entity.Student;
 
 @Repository
 public interface ControlInterface {
-	//╡И©╢кЫсп╪щпёпео╒
+	//О©╫И©╢О©╫О©╫О©╫п╪О©╫пёО©╫О©╫о╒
 	public List<School> selectAllSchool();
-	//м╗╧Щ╪щпёidпч╦д╪щпёв╢л╛уК╤т╫Шж╧╨м╩ж╦╢╠╗цШиЙгК╣д
+	//м╗О©╫О©╫О©╫О©╫пёidО©╫ч╦д╪О©╫пёв╢л╛О©╫О©╫т╫О©╫ж╧О©╫м╩ж╦О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
 	public void updateSchoolStateById();
-	//╡И©╢кЫсп╫ла╥╣доЙо╦пео╒
+	//О©╫И©╢О©╫О©╫О©╫п╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╦О©╫О©╫о╒
 	public void selectAllTeacher();
-	//м╗╧Щ╫ла╥пуцШ╡И╫ла╥id
+	//м╗О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫id
 	public void selectTeacherIdByName(@Param("teacher_name")String teacher_name );
-	//╡Ия╞кЫсп╫ла╥Ё╣пео╒
+	//О©╫О©╫я╞О©╫О©╫О©╫п╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒
 	public List<Car> selectAllCar();
-	//╡И©╢кЫспя╖т╠пео╒
+	//О©╫И©╢О©╫О©╫О©╫О©╫я╖т╠О©╫О©╫о╒
 	public List<Student> selectAllStudent();
-	//╡Ия╞╧╚╦Фпео╒
+	//О©╫О©╫я╞О©╫О©╫О©╫О©╫О©╫О©╫о╒
 	public List<Message> selectAllMessage();
-	//тЖ╪с╧╚╦Фпео╒
+	//О©╫О©╫О©╫с╧О©╫О©╫О©╫О©╫О©╫о╒
 	public void addMassage(@Param("massage_content")String massage_content ,
 			@Param("massage_time")String massage_time);
-	//╡Ия╞╪щпё╣дв╢л╛обю╜©Ротй╬
-	public List<SchooleState> selectSchoolState();
-	//╡Ия╞╪щпё©╙м╗иЙгК╠М
-	public List<SchoolApply> selectSchoolApply();
-	//иСеЗ╪щпё©╙м╗иЙгК
+	//О©╫О©╫я╞О©╫О©╫пёО©╫О©╫в╢л╛О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╬
+/*	public List<SchooleState> selectSchoolState();
+	//О©╫О©╫я╞О©╫О©╫пёО©╫О©╫м╗О©╫О©╫О©╫О©╫О©╫
+	public List<SchoolApply> selectSchoolApply();*/
+	//О©╫О©╫О©╫О©╫О©╫О©╫пёО©╫О©╫м╗О©╫О©╫О©╫О©╫
 	public void updateSchoolApplyState(@Param("schoolapply_id") int schoolapply_id);
 	
 	
