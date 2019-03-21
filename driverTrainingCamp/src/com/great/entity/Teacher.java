@@ -1,7 +1,10 @@
 package com.great.entity;
 
+import java.util.List;
+
 public class Teacher {
-	
+
+	private School school;
 	private int teacher_id;
 	private int school_id;
 	private int user_id;
@@ -12,15 +15,16 @@ public class Teacher {
 	private String teacher_birth;
 	private String teacher_img;
 	private String teacher_intruduce;
-	
-	
+	private List<Student> students;
 	public Teacher() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	public Teacher(int teacher_id, int school_id, int user_id, String teacher_name, String teacher_sex,
-			String teacher_phone, int teacher_state, String teacher_birth, String teacher_img,
-			String teacher_intruduce) {
+	public Teacher(School school, int teacher_id, int school_id, int user_id, String teacher_name, String teacher_sex,
+			String teacher_phone, int teacher_state, String teacher_birth, String teacher_img, String teacher_intruduce,
+			List<Student> students) {
 		super();
+		this.school = school;
 		this.teacher_id = teacher_id;
 		this.school_id = school_id;
 		this.user_id = user_id;
@@ -31,6 +35,13 @@ public class Teacher {
 		this.teacher_birth = teacher_birth;
 		this.teacher_img = teacher_img;
 		this.teacher_intruduce = teacher_intruduce;
+		this.students = students;
+	}
+	public School getSchool() {
+		return school;
+	}
+	public void setSchool(School school) {
+		this.school = school;
 	}
 	public int getTeacher_id() {
 		return teacher_id;
@@ -92,7 +103,12 @@ public class Teacher {
 	public void setTeacher_intruduce(String teacher_intruduce) {
 		this.teacher_intruduce = teacher_intruduce;
 	}
-	
-	
+	public List<Student> getStudents() {
+		return students;
+	}
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
 
+	
 }
