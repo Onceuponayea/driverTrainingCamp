@@ -6,12 +6,11 @@ public class Teacher {
 
 	private School school;
 	private int teacher_id;
-	private int school_id;
 	private int user_id;
+	private int teacher_state;
 	private String teacher_name;
 	private String teacher_sex;
 	private String teacher_phone;
-	private int teacher_state;
 	private String teacher_birth;
 	private String teacher_img;
 	private String teacher_intruduce;
@@ -20,13 +19,12 @@ public class Teacher {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Teacher(School school, int teacher_id, int school_id, int user_id, String teacher_name, String teacher_sex,
+	public Teacher(School school, int teacher_id, int user_id, String teacher_name, String teacher_sex,
 			String teacher_phone, int teacher_state, String teacher_birth, String teacher_img, String teacher_intruduce,
 			List<Student> students) {
 		super();
 		this.school = school;
 		this.teacher_id = teacher_id;
-		this.school_id = school_id;
 		this.user_id = user_id;
 		this.teacher_name = teacher_name;
 		this.teacher_sex = teacher_sex;
@@ -48,12 +46,6 @@ public class Teacher {
 	}
 	public void setTeacher_id(int teacher_id) {
 		this.teacher_id = teacher_id;
-	}
-	public int getSchool_id() {
-		return school_id;
-	}
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
 	}
 	public int getUser_id() {
 		return user_id;
@@ -106,9 +98,10 @@ public class Teacher {
 	public List<Student> getStudents() {
 		return students;
 	}
+
 	public void setStudents(List<Student> students) {
 		this.students = students;
 	}
-
+	
 	
 }
