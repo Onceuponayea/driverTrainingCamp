@@ -5,21 +5,19 @@ public class EvaSchool {
 	private int school_id;
 	private int level_id;
 	private int evaluate_id;
-	private String evaluate_type;
 	private String evaluate_school_content;
 	private String evaluate_school_date;
 	public EvaSchool() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public EvaSchool(int evaluate_school_id, int school_id, int level_id, int evaluate_id, String evaluate_type,
+	public EvaSchool(int evaluate_school_id, int school_id, int level_id, int evaluate_id,
 			String evaluate_school_content, String evaluate_school_date) {
 		super();
 		this.evaluate_school_id = evaluate_school_id;
 		this.school_id = school_id;
 		this.level_id = level_id;
 		this.evaluate_id = evaluate_id;
-		this.evaluate_type = evaluate_type;
 		this.evaluate_school_content = evaluate_school_content;
 		this.evaluate_school_date = evaluate_school_date;
 	}
@@ -47,12 +45,6 @@ public class EvaSchool {
 	public void setEvaluate_id(int evaluate_id) {
 		this.evaluate_id = evaluate_id;
 	}
-	public String getEvaluate_type() {
-		return evaluate_type;
-	}
-	public void setEvaluate_type(String evaluate_type) {
-		this.evaluate_type = evaluate_type;
-	}
 	public String getEvaluate_school_content() {
 		return evaluate_school_content;
 	}
@@ -65,6 +57,6 @@ public class EvaSchool {
 	public void setEvaluate_school_date(String evaluate_school_date) {
 		this.evaluate_school_date = evaluate_school_date;
 	}
-
+	
 	
 }

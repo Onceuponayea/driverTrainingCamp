@@ -5,7 +5,6 @@ public class EvaTheacher {
 	private int theacher_id;
 	private int evaluate_id;
 	private int level_id;
-	private String evaluate_type;
 	private String evaluate_theacher_content;
 	private String evaluate_theacher_date;
 
@@ -14,14 +13,13 @@ public class EvaTheacher {
 		// TODO Auto-generated constructor stub
 	}
 
-	public EvaTheacher(int evaluate_theacher_id, int theacher_id, int evaluate_id, int level_id, String evaluate_type,
+	public EvaTheacher(int evaluate_theacher_id, int theacher_id, int evaluate_id, int level_id,
 			String evaluate_theacher_content, String evaluate_theacher_date) {
 		super();
 		this.evaluate_theacher_id = evaluate_theacher_id;
 		this.theacher_id = theacher_id;
 		this.evaluate_id = evaluate_id;
 		this.level_id = level_id;
-		this.evaluate_type = evaluate_type;
 		this.evaluate_theacher_content = evaluate_theacher_content;
 		this.evaluate_theacher_date = evaluate_theacher_date;
 	}
@@ -56,14 +54,6 @@ public class EvaTheacher {
 
 	public void setLevel_id(int level_id) {
 		this.level_id = level_id;
-	}
-
-	public String getEvaluate_type() {
-		return evaluate_type;
-	}
-
-	public void setEvaluate_type(String evaluate_type) {
-		this.evaluate_type = evaluate_type;
 	}
 
 	public String getEvaluate_theacher_content() {
