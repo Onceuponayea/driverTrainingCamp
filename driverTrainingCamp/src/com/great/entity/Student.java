@@ -8,6 +8,7 @@ public class Student {
 	private int level_id;
 	private int student_teva;
 	private int student_seva;
+	private int level_name;
 	private String student_phone;
 	private String student_name;
 	private String student_sex;
@@ -22,8 +23,8 @@ public class Student {
 	}
 
 	public Student(Teacher teacher, School school, int student_id, int user_id, int level_id, int student_teva,
-			int student_seva, String student_phone, String student_name, String student_sex, String student_idnum,
-			String student_birth, String student_date, String student_adress) {
+			int student_seva, int level_name, String student_phone, String student_name, String student_sex,
+			String student_idnum, String student_birth, String student_date, String student_adress) {
 		super();
 		this.teacher = teacher;
 		this.school = school;
@@ -32,6 +33,7 @@ public class Student {
 		this.level_id = level_id;
 		this.student_teva = student_teva;
 		this.student_seva = student_seva;
+		this.level_name = level_name;
 		this.student_phone = student_phone;
 		this.student_name = student_name;
 		this.student_sex = student_sex;
@@ -95,6 +97,14 @@ public class Student {
 
 	public void setStudent_seva(int student_seva) {
 		this.student_seva = student_seva;
+	}
+
+	public int getLevel_name() {
+		return level_name;
+	}
+
+	public void setLevel_name(int level_name) {
+		this.level_name = level_name;
 	}
 
 	public String getStudent_phone() {
